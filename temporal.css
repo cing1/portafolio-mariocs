@@ -1,0 +1,173 @@
+/* === RESPONSIVE DESIGN === */
+/* 
+/* Pantallas Medianas (Tabletas y Laptops pequeñas) */
+@media (max-width: 1024px) {
+  .container {
+    padding: 5rem 3rem;
+  }
+
+  .hero-section h1 {
+    font-size: 4rem;
+  }
+}
+
+/* Teléfonos y Tabletas en Vertical */
+@media (max-width: 768px) {
+  .container {
+    padding: 4rem 1.5rem;
+    max-width: 100%;
+  }
+
+  /* Navegación Compacta */
+  nav {
+    padding: 0 0.5rem;
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow-x: auto;
+    /* Ocultar barra de scroll en móviles */
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  nav a {
+    padding: 1rem 0.5rem;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    flex: 1 0 auto;
+    text-align: center;
+    border: none;
+  }
+
+  /* Hero Section - Aumentar protagonismo en móvil */
+  .hero-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+    letter-spacing: -1px;
+  }
+
+  .hero-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    gap: 1rem;
+  }
+
+  .btn,
+  .btn-outline {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Biografía (Sobre Mi) apilada */
+  #sobre-mi {
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .foto-perfil-container {
+    margin: 0 auto;
+  }
+
+  /* Ocultar eje Y para ahorrar espacio en móviles */
+  .coord-y {
+    display: none;
+  }
+
+  .sobre-mi-texto p {
+    text-align: justify;
+  }
+
+  /* Títulos generales */
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Controles y Buscador de Proyectos */
+  .filtros-container {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    margin-bottom: 1rem;
+    flex-wrap: nowrap;
+    /* Scroll suave */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filtro-btn {
+    flex: 0 0 auto;
+  }
+
+  /* Romper la grilla en línea del buscador y select (que tenían max-width o inline styles) */
+  .controles-proyectos>div:nth-child(2) {
+    grid-template-columns: 1fr !important;
+  }
+
+  .ordenacion-container {
+    justify-content: space-between;
+  }
+
+  /* Grillas Convertidas a Columnas Simples/Doble */
+  #lista-proyectos {
+    grid-template-columns: 1fr;
+  }
+
+  .software-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* El div de idiomas y otros tiene inline display grid, superponerlo */
+  #competencias>div[style*="display: grid"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-links-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Teléfonos Pequeños */
+@media (max-width: 480px) {
+  .container {
+    padding: 3rem 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .foto-perfil {
+    width: 240px;
+    height: 280px;
+  }
+
+  .software-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav a {
+    font-size: 0.6rem;
+    padding: 0.8rem 0.4rem;
+    letter-spacing: 0.5px;
+  }
+}

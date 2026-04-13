@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="project-title">Galería de Proyecto</title>
+    <link rel="stylesheet" href="style_portafolio.css" />
+    <style>
+      /* Estilos específicos para la página de proyecto */
+      .btn-back {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 90;
+        background: var(--secondary);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+      .btn-back:hover {
+        background: var(--accent);
+        transform: scale(1.05);
+      }
+      .gallery-container {
+        padding: 2rem 6rem;
+        background: var(--primary);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+
+      .gallery-header {
+        text-align: center;
+        margin-bottom: 2rem;
+        border-bottom: 3px solid var(--secondary);
+        padding-bottom: 1rem;
+      }
+
+      .gallery-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--accent);
+      }
+
+      .gallery-header p {
+        font-size: 1.1rem;
+        color: var(--secondary);
+      }
+
+      /* Ficha de Proyecto */
+      .proyecto-ficha {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2.5rem;
+        text-align: left;
+        background: var(--glass-bg, rgba(15, 23, 42, 0.7));
+        padding: 2rem;
+        border-radius: var(--radius-md, 8px);
+        border: 1px solid var(--glass-border, rgba(56, 189, 248, 0.15));
+      }
+
+      .ficha-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .ficha-item h3 {
+        color: var(--secondary, #38bdf8);
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .ficha-item p {
+        font-size: 1rem;
+        color: var(--text, #f1f5f9);
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      /* Grid de Imágenes */
+      .image-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 6px;
+      }
+
+      .image-card {
+        overflow: hidden;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+        border: 2px solid var(--secondary);
+        cursor: pointer;
+      }
+
+      .image-card:hover {
+        transform: scale(1.02);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .image-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .back-button {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 90;
+      }
+
+      /* Estilos del Modal */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 200;
+        padding-top: 50px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.95);
+        animation: fadeIn 0.3s;
+      }
+
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 90%;
+        max-width: 1000px;
+        max-height: 90vh;
+        object-fit: contain;
+        border-radius: var(--radius);
+        border: 2px solid var(--accent);
+        animation: zoomIn 0.4s;
+      }
+
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+
+      .close:hover {
+        color: var(--accent);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes zoomIn {
+        from {
+          transform: scale(0.8);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="portafolio_mario_cesgo.html" class="btn-back"
+      >⬅️ Volver al Portafolio</a
+    >
+
+    <div class="gallery-container">
+      <div class="gallery-header">
+        <h1 id="proyecto-titulo">Cargando Proyecto...</h1>
+        <p id="proyecto-descripcion"></p>
+
+        <div id="proyecto-ficha" class="proyecto-ficha" style="display: none">
+          <div class="ficha-item">
+            <h3>🎯 Objetivo</h3>
+            <p id="proyecto-objetivo"></p>
+          </div>
+          <div class="ficha-item">
+            <h3>💻 Software Usado</h3>
+            <p id="proyecto-software"></p>
+          </div>
+          <div class="ficha-item">
+            <h3>📈 Impacto</h3>
+            <p id="proyecto-impacto"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="image-grid" id="galeria-imagenes"></div>
+    </div>
+
+    <div id="imageModal" class="modal">
+      <span class="close" id="closeModal">&times;</span>
+
+      <img class="modal-content" id="fullImage" />
+    </div>
+
+    <footer>
+      <p>© 2025 Portafolio Personal</p>
+      <p>Mario Cesgo Soliz</p>
+    </footer>
+
+    <script>
+      // Referencias a los elementos del Modal
+      const modal = document.getElementById("imageModal");
+      const fullImage = document.getElementById("fullImage");
+      const closeModalBtn = document.getElementById("closeModal");
+
+      // Función para abrir el modal
+      function openModal(imageSrc) {
+        fullImage.src = imageSrc;
+        modal.style.display = "block";
+      }
+
+      // Función para cerrar el modal
+      function closeModal() {
+        modal.style.display = "none";
+      }
+
+      // Event Listeners para cerrar el modal
+      closeModalBtn.onclick = closeModal;
+
+      // Cierra el modal si el usuario hace clic fuera de la imagen
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          closeModal();
+        }
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // Cargar los datos del proyecto desde localStorage
+        const proyectoJSON = localStorage.getItem("proyectoSeleccionado");
+        const galleryContainer = document.getElementById("galeria-imagenes");
+
+        if (!proyectoJSON) {
+          document.getElementById("proyecto-titulo").textContent =
+            "Error: No se seleccionó ningún proyecto.";
+          document.getElementById("proyecto-descripcion").textContent =
+            "Vuelve al portafolio principal e intenta de nuevo.";
+          return;
+        }
+
+        const proyecto = JSON.parse(proyectoJSON);
+
+        // Rellenar la información
+        document.getElementById("project-title").textContent = proyecto.titulo;
+        document.getElementById("proyecto-titulo").textContent =
+          proyecto.titulo;
+        document.getElementById("proyecto-descripcion").textContent =
+          proyecto.descripcion;
+
+        // Llenar Ficha del Proyecto
+        if (proyecto.objetivo || proyecto.software_usado || proyecto.impacto) {
+          document.getElementById("proyecto-ficha").style.display = "grid";
+          document.getElementById("proyecto-objetivo").textContent =
+            proyecto.objetivo || "No especificado";
+          document.getElementById("proyecto-software").textContent =
+            proyecto.software_usado || "No especificado";
+          document.getElementById("proyecto-impacto").textContent =
+            proyecto.impacto || "No especificado";
+        }
+
+        // Renderizar las imágenes de la galería
+        if (proyecto.galeria && proyecto.galeria.length > 0) {
+          proyecto.galeria.forEach((url, index) => {
+            const imageCard = document.createElement("div");
+            imageCard.className = "image-card";
+
+            const img = document.createElement("img");
+            img.src = url;
+            img.alt = `Imagen ${index + 1} del proyecto: ${proyecto.titulo}`;
+
+            // Listener para abrir el modal
+            imageCard.addEventListener("click", () => {
+              openModal(url);
+            });
+
+            imageCard.appendChild(img);
+            galleryContainer.appendChild(imageCard);
+          });
+        } else {
+          galleryContainer.innerHTML =
+            '<p style="text-align:center; padding: 2rem;">No hay imágenes de galería disponibles para este proyecto.</p>';
+        }
+      });
+    </script>
+  </body>
+</html>

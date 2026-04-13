@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mario Cesgo Soliz | Ing. Civil</title>
+    <meta
+      name="description"
+      content="Portafolio profesional de Mario Cesgo Soliz, Ingeniero Civil especializado en BIM, estructuras y carreteras."
+    />
+    <link rel="stylesheet" href="style_portafolio.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-links">
+          <a href="#sobre-mi" class="active">Perfil</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#competencias">Habilidades</a>
+          <a href="#curriculum">CV</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="inicio" class="hero">
+        <div class="hero-content">
+          <h1 class="reveal stagger-1">Mario Cesgo Soliz</h1>
+          <h2 class="reveal stagger-2">
+            Ingeniero Civil <span>BIM & Innovación</span>
+          </h2>
+          <p class="reveal stagger-3">
+            Ingeniero Civil recién egresado con enfoque en la digitalización de
+            la construcción y diseño de infraestructura sostenible. Apasionado
+            por transformar los retos de la ingeniería moderna a través de la
+            metodología BIM y soluciones estructurales de precisión.
+          </p>
+          <div class="hero-btns reveal stagger-4">
+            <a href="#proyectos" class="btn">Ver Proyectos</a>
+            <a href="#curriculum" class="btn">Descargar CV</a>
+          </div>
+          <div class="scroll-indicator" aria-hidden="true">
+            <div class="mouse"></div>
+            <span>Deslizar</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sobre mí -->
+      <section id="sobre-mi" class="container reveal">
+        <div class="foto-perfil-container">
+          <span class="label-coord coord-x">X-AXIS: 280.00</span>
+          <span class="label-coord coord-y">Y-AXIS: 320.00</span>
+          <div class="foto-perfil-wrapper">
+            <img
+              src="./img/perfil/foto_perfil.jpg"
+              alt="Ingeniero Civil - Mario Cesgo"
+              class="foto-perfil"
+            />
+          </div>
+        </div>
+        <div class="sobre-mi-texto">
+          <h2>👷‍♂️ Acerca de mí</h2>
+          <p>
+            Soy un Ingeniero Civil recién graduado con una formación sólida en
+            análisis estructural, gestión de obra y planificación vial. Mi
+            enfoque radica en la integración de nuevas tecnologías como BIM
+            (Building Information Modeling) para optimizar procesos y reducir
+            márgenes de error en la construcción moderna.
+          </p>
+          <p style="margin-top: 1rem">
+            Me apasiona transformar desafíos técnicos en soluciones innovadoras,
+            modernas y sostenibles, integrando la tecnología en cada etapa del
+            ciclo de vida del proyecto.
+          </p>
+        </div>
+      </section>
+
+      <!-- Proyectos -->
+      <section id="proyectos" class="container">
+        <h2 class="reveal">🏗️ Proyectos Destacados</h2>
+        <div class="controles-proyectos reveal">
+          <div class="filtros-container">
+            <button class="filtro-btn active" data-mencion="todos">
+              Todos
+            </button>
+            <button class="filtro-btn" data-mencion="estructural">
+              Estructural
+            </button>
+            <button class="filtro-btn" data-mencion="carreteras">
+              Carreteras
+            </button>
+            <button class="filtro-btn" data-mencion="sanitaria">
+              Sanitaria
+            </button>
+            <button class="filtro-btn" data-mencion="hidráulica">
+              Hidráulica
+            </button>
+          </div>
+
+          <div
+            class="buscar-ordenar-container"
+          >
+            <div class="buscador-container">
+              <input
+                type="text"
+                id="buscador"
+                placeholder="🔍 Buscar por nombre, descripción o software..."
+                aria-label="Buscar proyectos por nombre, descripción o software"
+              />
+            </div>
+            <div
+              class="ordenacion-container"
+            >
+              <label
+                for="ordenar"
+              >Ordenar:</label
+              >
+              <select
+                id="ordenar"
+              >
+                <option value="reciente">Recientes</option>
+                <option value="antiguo">Antiguos</option>
+              </select>
+            </div>
+          </div>
+          <p
+            style="
+              font-size: 0.9rem;
+              color: var(--text-muted);
+              text-align: right;
+            "
+          >
+            Mostrando
+            <strong id="total-proyectos" style="color: var(--secondary)"
+              >0</strong
+            >
+            proyectos
+          </p>
+        </div>
+
+        <div id="lista-proyectos">
+          <!-- Renderizado dinámico desde script.js -->
+        </div>
+      </section>
+
+      <!-- Competencias -->
+      <section id="competencias" class="container">
+        <h2 class="reveal">💼 Competencias Profesionales</h2>
+        <div class="competencia-section reveal">
+          <h3>🔧 Aptitudes Técnicas</h3>
+          <ul class="competencia-list">
+            <li>Diseño arquitectónico y estructural en entornos BIM</li>
+            <li>Modelado de instalaciones MEP</li>
+            <li>Elaboración de planos constructivos detallados</li>
+            <li>Análisis de precios unitarios y presupuestos</li>
+            <li>Programación aplicada a la ingeniería</li>
+          </ul>
+        </div>
+        <div class="competencia-section reveal">
+          <h3>💻 Software que manejo</h3>
+          <div class="software-grid">
+            <span class="software-item"
+              ><img src="./img/software%20icon/AutoCad.png" alt="AutoCad" />
+              Autocad 2D-3D</span
+            >
+            <span class="software-item"
+              ><img src="./img/software%20icon/Revit.png" alt="Revit" /> Revit
+              (modelado BIM)</span
+            >
+            <span class="software-item"
+              ><img src="./img/software%20icon/Excel.png" alt="Excel" /> Excel
+              Avanzado</span
+            >
+            <span class="software-item"
+              ><img src="./img/software%20icon/Civil3D.png" alt="Civil 3D" />
+              Civil 3D</span
+            >
+            <span class="software-item"
+              ><img
+                src="./img/software%20icon/Infraworks.png"
+                alt="Infraworks"
+              />
+              Infraworks</span
+            >
+            <span class="software-item"
+              ><img
+                src="./img/software%20icon/Robot_Structural.png"
+                alt="Robot Structural"
+              />
+              Robot Structural</span
+            >
+            <span class="software-item"
+              ><img src="./img/software%20icon/Sap2000.png" alt="Sap 2000" />
+              Sap 2000</span
+            >
+            <span class="software-item"
+              ><img src="./img/software%20icon/Etabs.png" alt="Etabs" />
+              Etabs</span
+            >
+            <span class="software-item"
+              ><img
+                src="./img/software%20icon/CSiBridge-removebg-preview.png"
+                alt="CS Bridge"
+              />
+              CS Bridge</span
+            >
+            <span class="software-item"
+              ><img src="./img/software%20icon/Mathcad.png" alt="MathCad" />
+              MathCad</span
+            >
+            <span class="software-item"
+              ><img src="./img/software%20icon/Project.png" alt="Project" />
+              Project</span
+            >
+            <span class="software-item">💰 Prescom</span>
+            <span class="software-item"
+              ><img
+                src="./img/software%20icon/synchro_trafic.png"
+                alt="Synchro Traffic"
+              />
+              Synchro Traffic</span
+            >
+            <span class="software-item"
+              ><img
+                src="./img/software%20icon/Google_Earth.png"
+                alt="Google Earth"
+              />
+              Google Earth</span
+            >
+            <span class="software-item"
+              ><img
+                src="./img/software%20icon/Global_Mapper.png"
+                alt="Global Mapper"
+              />
+              Global Mapper</span
+            >
+            <span class="software-item"
+              ><img src="./img/software%20icon/Python.png" alt="Python" />
+              Python</span
+            >
+            <span class="software-item"
+              ><img
+                src="./img/software%20icon/Javascript.png"
+                alt="Javascript"
+              />
+              Javascript</span
+            >
+          </div>
+        </div>
+        <div
+          class="competencia-grid reveal"
+        >
+          <div class="competencia-section">
+            <h3>🌍 Idiomas</h3>
+            <ul class="competencia-list competencia-list-block">
+              <li><strong>Español</strong> – Nativo</li>
+              <li><strong>Inglés</strong> – Intermedio</li>
+              <li><strong>Quechua</strong> – Nativo</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="competencia-grid reveal"
+        >
+          <div class="competencia-section">
+            <h3>🚗 Otros</h3>
+            <ul class="competencia-list competencia-list-block">
+              <li>Licencia de conducir categoría A</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Currículum Vitae -->
+      <section id="curriculum" class="container reveal">
+        <h2>📄 Currículum Vitae</h2>
+        <div class="curriculum-card">
+          <p style="margin-bottom: 2rem; color: var(--text-muted)">
+            Explore mi trayectoria profesional detallada descargando mi CV en
+            formato PDF.
+          </p>
+          <a href="./CV_Mario_Cesgo.pdf" download class="btn">
+            <span>📥 Descargar Curriculum Vitae (CV)</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Contáctame -->
+      <section id="contacto" class="container reveal">
+        <h2 style="margin-bottom: 3rem">🤝 Contáctame</h2>
+        <div class="contact-links-grid">
+          <a href="mailto:mariocs855@gmail.com" class="contact-link">
+            <span class="icon">📧</span>
+            <div>
+              <strong>Email</strong>
+              <p style="font-size: 0.8rem; color: var(--text-muted)">
+                mariocs855@gmail.com
+              </p>
+            </div>
+          </a>
+          <a
+            href="https://wa.me/59174446236"
+            target="_blank"
+            class="contact-link"
+          >
+            <span class="icon">📱</span>
+            <div>
+              <strong>WhatsApp</strong>
+              <p style="font-size: 0.8rem; color: var(--text-muted)">
+                +591 74446236
+              </p>
+            </div>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mariocesgo/"
+            target="_blank"
+            class="contact-link"
+          >
+            <span class="icon">🔗</span>
+            <div>
+              <strong>LinkedIn</strong>
+              <p style="font-size: 0.8rem; color: var(--text-muted)">
+                Ver perfil profesional
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 Mario Cesgo Soliz | Ingeniero Civil</p>
+    </footer>
+
+    <script src="script_portafolio.js"></script>
+  </body>
+</html>
