@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mario Cesgo Soliz | Proyectos</title>
+    <meta
+      name="description"
+      content="Proyectos de programación de Mario Cesgo Soliz, Ingeniero Civil especializado en desarrollo de herramientas para ingeniería."
+    />
+    <link rel="icon" type="image/x-icon" href="img/icons/icon.png">
+    <link rel="stylesheet" href="css/style_portafolio.css" />
+    <link rel="stylesheet" href="css/responsive_portafolio.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-links">
+          <a href="index.html">Inicio</a>
+          <a href="#proyectos" class="active">Proyectos de Programación</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="proyectos" class="container" style="margin-top: 2rem;">
+        <h2 class="reveal">💻 Proyectos de Programación</h2>
+        <div class="controles-proyectos reveal">
+          <div class="buscar-ordenar-container">
+            <div class="buscador-container">
+              <input
+                type="text"
+                id="buscador"
+                placeholder="🔍 Buscar por nombre, descripción o software..."
+                aria-label="Buscar proyectos por nombre, descripción o software"
+              />
+            </div>
+            <div class="ordenacion-container">
+              <label for="ordenar">Ordenar:</label>
+              <select id="ordenar">
+                <option value="reciente">Recientes</option>
+                <option value="antiguo">Antiguos</option>
+              </select>
+            </div>
+          </div>
+          <p
+            style="
+              font-size: 0.9rem;
+              color: var(--text-muted);
+              text-align: right;
+            "
+          >
+            Mostrando
+            <strong id="total-proyectos" style="color: var(--secondary)"
+              >0</strong
+            >
+            proyectos
+          </p>
+        </div>
+
+        <div id="lista-proyectos">
+          <!-- Renderizado dinámico desde script.js -->
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 -- Mario Cesgo Soliz.</p>
+    </footer>
+
+    <script src="js/datos_proyectos.js"></script>
+    <script src="js/script_programacion.js"></script>
+  </body>
+</html>

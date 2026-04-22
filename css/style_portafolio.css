@@ -108,7 +108,7 @@ p {
     padding: 2rem;
     position: relative;
     background-color: var(--primary);
-    background-image: url('img/portada-bg.jpg');
+    background-image: url('../img/portada-bg.jpg');
     background-size: cover;
 }
 
@@ -405,6 +405,7 @@ h2 {
 }
 
 /* === PROJECTS SECTION === */
+
 .controles-proyectos {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--glass-border);
@@ -548,7 +549,7 @@ h2 {
 }
 
 .proyecto-info {
-    padding: 1.2rem;
+    padding: 0.8rem 1.2rem;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -570,7 +571,7 @@ h2 {
 }
 
 .btn-small {
-    padding: 0.5rem 1rem !important;
+    padding: 0.3rem 1rem !important;
     font-size: 0.8rem !important;
     box-shadow: 0 2px 0px #b45309 !important;
 }
@@ -582,7 +583,7 @@ h2 {
     width: 100%;
     padding-left: 20px;
     padding-bottom: 5px;
-    background: linear-gradient( to top, var(--primary), #001e635d);
+    background: linear-gradient(to top, var(--primary), #001e635d);
     color: var(--text);
     font-weight: 600;
 }
@@ -590,7 +591,6 @@ h2 {
 .proyecto p {
     font-size: 0.9rem;
     color: var(--text-muted);
-    margin-bottom: 0.8rem;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -608,6 +608,54 @@ h2 {
     margin-right: 0.2rem;
     margin-bottom: 0.3rem;
     white-space: nowrap;
+}
+
+.proyecto-desc {
+    font-size: 0.9rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.proyecto-extra-info {
+    margin-bottom: 1.2rem;
+    padding: 0.8rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--glass-border);
+}
+
+.proyecto-detalles-mini {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.proyecto-detalles-mini strong {
+    color: var(--secondary);
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+.proyecto-detalles-mini ul {
+    list-style-type: none;
+    padding-left: 0.5rem;
+}
+
+.proyecto-detalles-mini ul li {
+    position: relative;
+    padding-left: 1rem;
+    margin-bottom: 2px;
+}
+
+.proyecto-detalles-mini ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+.proyecto-detalles-mini:last-child {
+    margin-bottom: 0;
 }
 
 /* === COMPETENCIAS === */
@@ -764,360 +812,4 @@ footer {
     text-align: center;
     border-top: 1px solid var(--glass-border);
     background: var(--primary-light);
-}
-
-/* === RESPONSIVE DESIGN === */
-
-/* Tablets Grandes (1024px) */
-@media (max-width: 1024px) {
-    .container {
-        padding: 4rem 3rem;
-    }
-
-    #sobre-mi {
-        gap: 3rem;
-    }
-
-    .foto-perfil {
-        width: 180px;
-        height: 220px;
-    }
-
-    .software-grid {
-        margin-left: 2rem;
-    }
-
-    .competencia-list li {
-        margin-left: 2rem;
-    }
-
-    #lista-proyectos {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 1.5rem;
-    }
-}
-
-/* Tablets (768px) */
-@media (max-width: 768px) {
-    .hero {
-        min-height: 70vh;
-        padding: 1.5rem;
-    }
-
-    .hero h2 {
-        margin-bottom: 1rem;
-    }
-
-    .hero p {
-        margin: 0 auto 1.5rem auto;
-        font-size: 0.95rem;
-    }
-
-    nav {
-        padding: 0 1rem;
-    }
-
-    .nav-links {
-        width: 100%;
-        gap: 0.5rem;
-        padding: 0.5rem 0;
-    }
-
-    nav a {
-        padding: 0.75rem 1rem;
-        font-size: 0.65rem;
-        letter-spacing: 1px;
-    }
-
-    main {
-        margin-top: 65px;
-    }
-
-    .container {
-        padding: 3rem 1.5rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-        margin-bottom: 2rem;
-    }
-
-    #sobre-mi {
-        flex-direction: column;
-        gap: 2rem;
-        text-align: center;
-    }
-
-    .foto-perfil-container .label-coord {
-        font-size: 8px;
-    }
-
-    .foto-perfil {
-        width: 160px;
-        height: 200px;
-    }
-
-    .controles-proyectos {
-        padding: 1.5rem;
-        margin-bottom: 2rem;
-    }
-
-    .buscar-ordenar-container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .ordenacion-container {
-        justify-content: flex-start;
-    }
-
-    .ordenacion-container select {
-        flex: none;
-        min-width: 120px;
-    }
-
-    #lista-proyectos {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 1.5rem;
-    }
-
-    .proyecto-img-wrapper {
-        height: 180px;
-    }
-
-    .software-grid {
-        margin-left: 0;
-        gap: 1rem;
-        justify-content: center;
-    }
-
-    .competencia-list li {
-        margin-left: 0;
-        padding: 0.5rem 1.5rem;
-    }
-
-    .competencia-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .contact-links-grid {
-        gap: 1.5rem;
-    }
-
-    .scroll-indicator {
-        bottom: 1.5rem;
-        font-size: 0.65rem;
-        letter-spacing: 1px;
-    }
-
-    footer {
-        padding: 3rem 1.5rem;
-    }
-}
-
-/* Móviles (480px) */
-@media (max-width: 480px) {
-    .hero {
-        min-height: 60vh;
-        padding: 1rem;
-    }
-
-    .hero h1 {
-        margin-bottom: 0.5rem;
-    }
-
-    .hero h2 span {
-        letter-spacing: 2px;
-        font-size: 0.45em;
-    }
-
-    .hero p {
-        margin: 0 auto 1rem auto;
-        font-size: 0.85rem;
-    }
-
-    .hero-btns {
-        flex-direction: column;
-        gap: 1rem;
-        width: 100%;
-    }
-
-    .hero-btns .btn {
-        width: 100%;
-    }
-
-    nav {
-        padding: 0 0.5rem;
-    }
-
-    nav a {
-        padding: 0.5rem 0.75rem;
-        font-size: 0.55rem;
-        letter-spacing: 0.5px;
-        border: none;
-    }
-
-    nav a:last-child {
-        border-right: none;
-    }
-
-    main {
-        margin-top: 60px;
-    }
-
-    .container {
-        padding: 2rem 1rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .foto-perfil-container {
-        padding: 15px;
-    }
-
-    .foto-perfil-container::before,
-    .foto-perfil-container::after,
-    .foto-perfil-wrapper::before,
-    .foto-perfil-wrapper::after {
-        width: 15px;
-        height: 15px;
-    }
-
-    .foto-perfil-container .label-coord {
-        display: none;
-    }
-
-    .foto-perfil {
-        width: 140px;
-        height: 180px;
-    }
-
-    .controles-proyectos {
-        padding: 1rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .filtros-container {
-        gap: 0.5rem;
-    }
-
-    .filtro-btn {
-        padding: 0.4rem 1rem;
-        font-size: 0.65rem;
-    }
-
-    .buscador-container input {
-        padding: 0.75rem 1rem;
-        font-size: 0.9rem;
-    }
-
-    .buscar-ordenar-container {
-        gap: 1rem;
-    }
-
-    .ordenacion-container {
-        width: 100%;
-    }
-
-    .ordenacion-container label {
-        font-size: 0.8rem;
-    }
-
-    .ordenacion-container select {
-        width: 100%;
-        padding: 0.5rem;
-    }
-
-    #lista-proyectos {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .proyecto:hover {
-        transform: translateY(-3px);
-    }
-
-    .proyecto-img-wrapper {
-        height: 150px;
-    }
-
-    .proyecto-footer {
-        flex-direction: column;
-        gap: 0.75rem;
-        justify-content: flex-start;
-    }
-
-    .fecha-publicacion {
-        font-size: 0.7rem;
-        width: 100%;
-    }
-
-    .btn-small {
-        width: 100%;
-        padding: 0.6rem 1rem !important;
-        font-size: 0.75rem !important;
-    }
-
-    .tag {
-        font-size: 0.65rem;
-        padding: 0rem 0.4rem;
-        margin-right: 0.15rem;
-    }
-
-    .software-grid {
-        gap: 0.75rem;
-    }
-
-    .software-item {
-        font-size: 0.8rem;
-    }
-
-    .software-item img {
-        width: 20px;
-        height: 20px;
-    }
-
-    .competencia-list li {
-        padding: 0.4rem 1rem;
-        font-size: 0.9rem;
-    }
-
-    .competencia-section h3 {
-        margin-bottom: 0.75rem;
-    }
-
-    .competencia-grid {
-        gap: 1rem;
-    }
-
-    .contact-links-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .contact-link {
-        padding: 1.25rem;
-        gap: 1rem;
-    }
-
-    .contact-link .icon {
-        font-size: 1.5rem;
-    }
-
-    .contact-link strong {
-        font-size: 0.95rem;
-    }
-
-    .scroll-indicator {
-        display: none;
-    }
-
-    footer {
-        padding: 2rem 1rem;
-        font-size: 0.9rem;
-    }
 }

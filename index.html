@@ -8,7 +8,9 @@
       name="description"
       content="Portafolio profesional de Mario Cesgo Soliz, Ingeniero Civil especializado en BIM, estructuras y carreteras."
     />
-    <link rel="stylesheet" href="style_portafolio.css" />
+    <link rel="icon" type="image/x-icon" href="img/icons/icon.png">
+    <link rel="stylesheet" href="css/style_portafolio.css" />
+    <link rel="stylesheet" href="css/responsive_portafolio.css" />
   </head>
   <body>
     <header>
@@ -30,11 +32,7 @@
             Ingeniero Civil <span>BIM & Innovación</span>
           </h2>
           <p class="reveal stagger-3">
-            Ingeniero Civil Junior con formación académica sólida y experiencia
-            inicial en proyectos de infraestructura. Manejo software BIM y
-            herramientas de cálculo, aportando responsabilidad, capacidad de
-            trabajo en equipo y disposición para aprender bajo supervisión.
-          </p>
+            Profesional egresado de la carrera de Ingeniería Civil en la USFX, con una sólida formación académica y experiencia inicial en diseño y modelado de infraestructura civil. Manejo software BIM y herramientas de cálculo. Destaco por mi responsabilidad, capacidad de trabajo en equipo y disposición para aprender bajo supervisión.
           <div class="hero-btns reveal stagger-4">
             <a href="#proyectos" class="btn">Ver Proyectos</a>
             <a href="#curriculum" class="btn">Descargar CV</a>
@@ -62,7 +60,7 @@
         <div class="sobre-mi-texto">
           <h2>👷‍♂️ Acerca de mí</h2>
           <p>
-            Ingeniero Civil Junior con formación académica sólida y experiencia
+            Profesional egresado de la carrera de Ingeniero Civil - USFX, con formación académica sólida y experiencia
             inicial en proyectos de construcción e infraestructura. Competente
             en el uso de software CAD y herramientas de cálculo estructural, con
             capacidad para elaborar planos, apoyar en inspecciones de obra y
@@ -83,6 +81,7 @@
       <!-- Proyectos -->
       <section id="proyectos" class="container">
         <h2 class="reveal">🏗️ Proyectos Destacados</h2>
+        <p style="margin-bottom: 1rem;" class="reveal">Todos los proyectos que se muestran a continuación fueron realizados por iniciativa propia, no son parte de cursos realizados.</p>
         <div class="controles-proyectos reveal">
           <div class="filtros-container">
             <button class="filtro-btn active" data-mencion="todos">
@@ -99,6 +98,9 @@
             </button>
             <button class="filtro-btn" data-mencion="hidráulica">
               Hidráulica
+            </button>
+            <button class="filtro-btn" data-mencion="programacion">
+              Programación
             </button>
           </div>
 
@@ -145,11 +147,16 @@
         <div class="competencia-section reveal">
           <h3>🔧 Aptitudes Técnicas</h3>
           <ul class="competencia-list">
-            <li>Diseño arquitectónico y estructural en entornos BIM</li>
-            <li>Modelado de instalaciones MEP</li>
-            <li>Elaboración de planos constructivos detallados</li>
-            <li>Análisis de precios unitarios y presupuestos</li>
-            <li>Programación aplicada a la ingeniería</li>
+            <li>Modelado y documentación BIM (Building Information Modeling)</li>
+            <li>Elaboración y revisión de planos técnicos 2D y 3D</li>
+            <li>Análisis y diseño estructural asistido por software</li>
+            <li>Simulación de procesos constructivos y planificación 4D</li>
+            <li>Diseño geométrico de carreteras y obras viales</li>
+            <li>Cálculo y dimensionamiento de estructuras de concreto y metálicas</li>
+            <li>Generación de metrados y presupuestos de obra</li>
+            <li>Integración de datos topográficos y geoespaciales</li>
+            <li>Automatización de tareas técnicas con programación (Python, JavaScript)</li>
+            <li>Colaboración interdisciplinaria en entornos digitales</li>
           </ul>
         </div>
         <div class="competencia-section reveal">
@@ -248,7 +255,7 @@
             <h3>🌍 Idiomas</h3>
             <ul class="competencia-list competencia-list-block">
               <li><strong>Español</strong> – Nativo</li>
-              <li><strong>Inglés</strong> – Intermedio</li>
+              <li><strong>Inglés</strong> – Básico</li>
               <li><strong>Quechua</strong> – Nativo</li>
             </ul>
           </div>
@@ -323,6 +330,7 @@
       <p>&copy; 2026 Mario Cesgo Soliz | Ingeniero Civil</p>
     </footer>
 
-    <script src="script_portafolio.js"></script>
+    <script src="js/datos_proyectos.js"></script>
+    <script src="js/script_portafolio.js"></script>
   </body>
 </html>

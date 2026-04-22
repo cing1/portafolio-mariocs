@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="project-title">Galería de Proyecto</title>
-    <link rel="stylesheet" href="style_portafolio.css" />
+    <link rel="icon" type="image/x-icon" href="img/icons/icon.png">
+    <link rel="stylesheet" href="css/style_portafolio.css" />
+    <link rel="stylesheet" href="css/responsive_portafolio.css" />
     <style>
       /* Estilos específicos para la página de proyecto */
       .btn-back {
@@ -183,7 +185,7 @@
     </style>
   </head>
   <body>
-    <a href="portafolio_mario_cesgo.html" class="btn-back"
+    <a href="index.html#proyectos" class="btn-back"
       >⬅️ Volver al Portafolio</a
     >
 
@@ -194,8 +196,12 @@
 
         <div id="proyecto-ficha" class="proyecto-ficha" style="display: none">
           <div class="ficha-item">
-            <h3>🎯 Objetivo</h3>
-            <p id="proyecto-objetivo"></p>
+            <h3>📝 Descripción / Objetivo</h3>
+            <p id="proyecto-descripcion-ficha"></p>
+          </div>
+          <div class="ficha-item">
+            <h3>🏆 Logros Clave</h3>
+            <ul id="proyecto-logros" style="color: var(--text); padding-left: 1.2rem;"></ul>
           </div>
           <div class="ficha-item">
             <h3>💻 Software Usado</h3>
@@ -272,10 +278,27 @@
           proyecto.descripcion;
 
         // Llenar Ficha del Proyecto
-        if (proyecto.objetivo || proyecto.software_usado || proyecto.impacto) {
+        if (proyecto.descripcion || proyecto.logros || proyecto.software_usado || proyecto.impacto) {
           document.getElementById("proyecto-ficha").style.display = "grid";
-          document.getElementById("proyecto-objetivo").textContent =
-            proyecto.objetivo || "No especificado";
+          document.getElementById("proyecto-descripcion-ficha").textContent =
+            proyecto.descripcion || "No especificada";
+          
+          const logrosLista = document.getElementById("proyecto-logros");
+          logrosLista.innerHTML = "";
+          if (proyecto.logros && Array.isArray(proyecto.logros)) {
+            proyecto.logros.forEach(logro => {
+              const li = document.createElement("li");
+              li.textContent = logro;
+              logrosLista.appendChild(li);
+            });
+          } else if (typeof proyecto.logros === 'string') {
+            const li = document.createElement("li");
+            li.textContent = proyecto.logros;
+            logrosLista.appendChild(li);
+          } else {
+            logrosLista.innerHTML = "<li>No especificados</li>";
+          }
+
           document.getElementById("proyecto-software").textContent =
             proyecto.software_usado || "No especificado";
           document.getElementById("proyecto-impacto").textContent =
