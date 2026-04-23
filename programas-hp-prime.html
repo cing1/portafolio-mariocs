@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programas para HP-PRIME</title>
+    <link rel="icon" type="image/x-icon" href="img/icons/icon.png">
+    <link rel="stylesheet" href="css/style_portafolio.css" />
+    <link rel="stylesheet" href="css/responsive_portafolio.css" />
+    <style>
+      .btn-back {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 90;
+        background: var(--secondary);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+      .btn-back:hover {
+        background: var(--accent);
+        transform: scale(1.05);
+      }
+      .programas-container {
+        padding: 2rem 6rem;
+        background: var(--primary);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+      .programas-header {
+        text-align: center;
+        margin-bottom: 2rem;
+        border-bottom: 3px solid var(--secondary);
+        padding-bottom: 1rem;
+      }
+      .programas-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--accent);
+      }
+      .programas-header p {
+        font-size: 1.1rem;
+        color: var(--secondary);
+      }
+      .programas-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+      .programa-card {
+        display: flex;
+        flex-direction: column;
+        background: var(--glass-bg, rgba(15, 23, 42, 0.7));
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--glass-border, rgba(56, 189, 248, 0.15));
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .programa-card h3 {
+        color: var(--accent);
+        margin-bottom: 0.5rem;
+      }
+      .programa-card p {
+        color: var(--text);
+        line-height: 1.6;
+      }
+      .programa-card .p-img {
+        height: 250px;
+        align-self: center;
+        margin: 1rem 0;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+      .programa-card .btn-download {
+        margin-top: auto;
+        align-self: center;
+        background: var(--secondary);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+      .programa-card .btn-download:hover {
+        background: var(--accent);
+        transform: scale(1.05);
+      }
+      .programa-card .autor {
+        font-size: 0.9rem;
+        color: #38bdf8;
+        margin-bottom: 0.5rem;
+      }
+      /* Responsive Design */
+      @media (max-width: 1024px) {
+        .programas-container {
+          padding: 2rem 3rem;
+        }
+        .programas-grid {
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 1.5rem;
+        }
+      }
+      @media (max-width: 768px) {
+        .programas-container {
+          padding: 2rem 1.5rem;
+        }
+        .programas-header h1 {
+          font-size: 2rem;
+        }
+        .programas-header p {
+          font-size: 1rem;
+        }
+        .programas-grid {
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 1.5rem;
+        }
+        .programa-card {
+          padding: 1.25rem;
+        }
+        .programa-card .p-img {
+          height: 200px;
+        }
+        .programa-card .btn-download {
+          padding: 0.5rem 0.75rem;
+          font-size: 0.9rem;
+        }
+      }
+      @media (max-width: 480px) {
+        .programas-container {
+          padding: 1.5rem 1rem;
+        }
+        .programas-header h1 {
+          font-size: 1.5rem;
+        }
+        .programas-header p {
+          font-size: 0.9rem;
+        }
+        .programas-grid {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+        .programa-card {
+          padding: 1rem;
+        }
+        .programa-card .p-img {
+          height: 150px;
+        }
+        .programa-card .btn-download {
+          padding: 0.4rem 0.6rem;
+          font-size: 0.8rem;
+        }
+        .programa-card .autor {
+          font-size: 0.8rem;
+        }
+      }
+    </style>
+  <body>
+    <a href="proyectos_programacion.html" class="btn-back">← Volver</a>
+    <div class="programas-container">
+      <div class="programas-header">
+        <h1>Programas para HP-PRIME</h1>
+        <p>Colección de programas desarrollados para la calculadora gráfica HP-PRIME</p>
+      </div>
+      <section id="programas" class="container">
+        <div class="programa-card">
+          <h3> <img src="img/programas-hp/icons/interpol.png" alt="INTERPOL V1.0" class="icon"> INTERPOL V1.0</h3>
+          <p class="autor">Autor: Mario Cesgo Soliz</p>
+          <p>Programa para interpolación de curvas de nivel topográficas.</p>
+          <img src="img/programas-hp/interpol.png" alt="INTERPOL V1.0" class="p-img">
+          <a href="https://drive.google.com/uc?id=1Qf1ImSw3bbtvJgtVXrNk1LoeRywjCWhM&export=download&authuser=0" download class="btn-download">DESCARGAR</a>
+        </div>
+        <div class="programa-card">
+          <h3> <img src="img/programas-hp/icons/metodos1p.png" alt="METODOS 1P" class="icon"> METODOS 1P</h3>
+          <p class="autor">Autor: Mario Cesgo Soliz</p>
+          <p>Programa de solución de ecuaciones lineales y no lineales, regresiones, interpolaciones, diferenciación, integración numérica y ecuaciones diferenciales.</p>
+          <img src="img/programas-hp/metodos1p01.png" alt="METODOS 1P" class="p-img">
+          <img src="img/programas-hp/metodos1p02.png" alt="METODOS 1P" class="p-img">
+          <a href="https://drive.google.com/uc?id=15JYd0wM3ZPppL-xdRPrQT2rR_od9tlV-&export=download&authuser=0" download class="btn-download">DESCARGAR</a>
+        </div>
+        <div class="programa-card">
+          <h3> <img src="img/programas-hp/icons/metodos2p.png" alt="METODOS 2P" class="icon"> METODOS 2P</h3>
+          <p class="autor">Autor: Mario Cesgo Soliz</p>
+          <p>Programa de solución de ecuaciones lineales y no lineales, regresiones, interpolaciones, diferenciación, integración numérica y ecuaciones diferenciales.</p>
+          <img src="img/programas-hp/metodos2p01.png" alt="METODOS 2P" class="p-img">
+          <img src="img/programas-hp/metodos2p02.png" alt="METODOS 2P" class="p-img">
+          <a href="https://drive.google.com/uc?id=1OYtGKzpd1-MzYcZeo6k7Rsn3H2pqpg2Q&export=download&authuser=0" download class="btn-download">DESCARGAR</a>
+        </div>
+        <div class="programa-card">
+          <h3> <img src="img/programas-hp/icons/geometric.png" alt="GEOMETRIC V2.0" class="icon"> GEOMETRIC V2.0</h3>
+          <p class="autor">Autor: Mario Cesgo Soliz</p>
+          <p>Programa que calcula propiedades geométricas de figuras y cuerpos.</p>
+          <img src="img/programas-hp/geometric.png" alt="GEOMETRIC V2.0" class="p-img">
+          <a href="https://drive.google.com/uc?id=1BwfboZZ7K-FUf5DrkBSCqSAdqjgMH-WW&export=download&authuser=0" download class="btn-download">DESCARGAR</a>
+        </div>
+        <div class="programa-card">
+          <h3> <img src="img/programas-hp/icons/cal-ladrillo.png" alt="CALCULO DE LADRILLO" class="icon"> CALCULO DE LADRILLO</h3>
+          <p class="autor">Autor: Mario Cesgo Soliz</p>
+          <p>Programa que calcula el número de ladrillos necesarios para construir una pared por metro cuadrado.</p>
+          <img src="img/programas-hp/cal-ladrillo.png" alt="CALCULO DE LADRILLO" class="p-img">
+          <a href="https://drive.google.com/uc?id=1RKIYSQdsFDzq0dkxvV-HRZClfakmsCZx&export=download&authuser=0" download class="btn-download">DESCARGAR</a>
+        </div>
+        <div class="programa-card">
+          <h3> <img src="img/programas-hp/icons/scale.png" alt="SCALE V1.0" class="icon"> SCALE V1.0</h3>
+          <p class="autor">Autor: Mario Cesgo Soliz</p>
+          <p>Programa para calcular la escala de un plano, calcular la distancia real y la distancia en el plano.</p>
+          <img src="img/programas-hp/scale.png" alt="SCALE V1.0" class="p-img">
+          <a href="https://drive.google.com/uc?id=1cmcGMjtpudsEnBMF_csAgNpGj5_KlrBW&export=download&authuser=0" download class="btn-download">DESCARGAR</a>
+        </div>
+        <div class="programa-card">
+          <h3> <img src="img/programas-hp/icons/arpol.png" alt="SCALE V1.0" class="icon"> GEOMETRIC V1.0</h3>
+          <p class="autor">Autor: Mario Cesgo Soliz</p>
+          <p>Programa para calcular el áreas de poilígonos irregulares.</p>
+          <img src="img/programas-hp/arpol.png" alt="SCALE V1.0" class="p-img">
+          <a href="https://drive.google.com/uc?id=1Dv7cQvZLascTl4mw5wMHvBN7XvtEhuF1&authuser=0" download class="btn-download">DESCARGAR</a>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,4 +1,30 @@
 const proyectos = [
+    {
+    id: 17,
+    titulo: "Programas para calculadora HP-PRIME",
+    descripcion:
+      "Colección de programas desarrollados para la calculadora gráfica HP-PRIME. Los programas están escritos en el lenguaje de programación nativo de la HP-PRIME y están disponibles como proyectos open source en GitHub.",
+    imagen: "img/programas-hp/portada.jpg",
+    enlace: "programas-hp-prime.html",
+    etiquetas: [
+      "Programación",
+      "Calculadora",
+      "HP-PRIME",
+      "Matemáticas",
+      "Ingeniería Civil",
+    ],
+    mencion: "programacion",
+    fecha: "2019-09-21",
+    logros: [
+      "Desarrollo de programas para la calculadora HP-PRIME en lenguaje PPL",
+      "Programción de algoritmos de métodos numéricos y funciones matemáticas",
+      "Herramientas automatizadas para estudiantes de ingeniería civil y matemáticas",
+    ],
+    software_usado: "PPL, HP-PRIME",
+    impacto:
+      "Facilita el aprendizaje y la aplicación de conceptos matemáticos e ingenieriles mediante programas personalizados para la HP-PRIME.",
+    galeria: ["seccion_viga.png", "verificaciones.png"],
+  },
   {
     id: 16,
     titulo: "Diseño a Flexión de Vigas de Hormigón Armado ACI 318-19 (Python)",
