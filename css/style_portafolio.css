@@ -691,9 +691,9 @@ h2 {
 
 #competencias .competencia-list li {
     background: rgba(255, 255, 255, 0.02);
-    padding: 0.5rem 1.5rem;
+    padding: 0.3rem 1.5rem;
     border-left: 3px solid var(--secondary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 3px;
     color: var(--text-muted);
     margin-left: 5rem;
 }
