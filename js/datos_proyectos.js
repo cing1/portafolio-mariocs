@@ -320,38 +320,6 @@ const proyectos = [
     ],
   },
   {
-    id: 7,
-    titulo: "Simulación 4D de un edificio con Navisworks",
-    descripcion:
-      "Integración BIM + cronograma para visualizar fases constructivas y detectar interferencias.",
-    imagen:
-      "./img/proyectos/3-simulacion_4d_de_edificio_con_navisworks/portada.jpg",
-    enlace: "#",
-    etiquetas: [
-      "Navisworks",
-      "BIM",
-      "4D",
-      "Construcción",
-      "Cronograma",
-      "Coordinación",
-    ],
-    mencion: "estructural",
-    fecha: "2025-09-01",
-    logros: [
-      "Integración del modelo BIM con el cronograma de obra",
-      "Visualización de fases constructivas en 4D",
-      "Detección y resolución de interferencias",
-      "Optimización de tiempos constructivos",
-    ],
-    software_usado: "Navisworks, Revit, MS Project",
-    impacto:
-      "Optimización de tiempos constructivos y reducción de costos por interferencias en obra.",
-    galeria: [
-      "./img/proyectos/3-simulacion_4d_de_edificio_con_navisworks/imagen_1.png",
-      "./img/proyectos/3-simulacion_4d_de_edificio_con_navisworks/imagen_2.png",
-    ],
-  },
-  {
     id: 6,
     titulo: "Análisis, Diseño y Modelado BIM de Puente Postensado",
     descripcion:
