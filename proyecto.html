@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="project-title">Galería de Proyecto</title>
-    <link rel="icon" type="image/x-icon" href="img/icons/icon.png">
+    <link rel="icon" type="image/x-icon" href="img/icons/icon.png" />
     <link rel="stylesheet" href="css/style_portafolio.css" />
     <link rel="stylesheet" href="css/responsive_portafolio.css" />
     <style>
@@ -182,12 +182,95 @@
           transform: scale(1);
         }
       }
+
+      /* RESPONSIVE PROYECTO.HTML*/
+
+      @media (max-width: 768px) {
+        .gallery-container {
+          padding: 1.5rem;
+        }
+        .gallery-header{
+          margin-top: 2rem;
+        }
+        .proyecto-titulo {
+          font-size: 0.8rem;
+        }
+        .gallery-header {
+          margin-bottom: 1.5rem;
+        }
+
+        .gallery-header h1 {
+          font-size: 1.5rem;
+        }
+
+        .gallery-header p {
+          font-size: 0.9rem;
+        }
+
+        .proyecto-ficha {
+          padding: 1rem;
+          gap: 1rem;
+        }
+
+        .ficha-item {
+          padding: 0.5rem 0;
+        }
+
+        .ficha-item h3 {
+          font-size: 1rem;
+        }
+
+        .ficha-item p {
+          font-size: 0.85rem;
+        }
+
+        .ficha-item ul {
+          padding-left: 1rem;
+        }
+
+        .ficha-item li {
+          font-size: 0.85rem;
+        }
+
+        .image-grid {
+          grid-template-columns: 1fr;
+          gap: 0.75rem;
+        }
+
+        .image-card img {
+          height: 180px;
+        }
+
+        .image-card:hover {
+          transform: scale(1.01);
+        }
+
+        .btn-back {
+          top: 0.5rem;
+          left: 0.5rem;
+          padding: 0.4rem 0.6rem;
+          font-size: 0.85rem;
+        }
+
+        .modal {
+          padding-top: 30px;
+        }
+
+        .modal-content {
+          width: 95%;
+          max-height: 80vh;
+        }
+
+        .close {
+          top: 8px;
+          right: 15px;
+          font-size: 28px;
+        }
+      }
     </style>
   </head>
   <body>
-    <a href="index.html#proyectos" class="btn-back"
-      >⬅️ Volver al Portafolio</a
-    >
+    <a href="index.html#proyectos" class="btn-back">⬅️ Volver al Portafolio</a>
 
     <div class="gallery-container">
       <div class="gallery-header">
@@ -201,7 +284,10 @@
           </div>
           <div class="ficha-item">
             <h3>🏆 Logros Clave</h3>
-            <ul id="proyecto-logros" style="color: var(--text); padding-left: 1.2rem;"></ul>
+            <ul
+              id="proyecto-logros"
+              style="color: var(--text); padding-left: 1.2rem"
+            ></ul>
           </div>
           <div class="ficha-item">
             <h3>💻 Software Usado</h3>
@@ -278,20 +364,25 @@
           proyecto.descripcion;
 
         // Llenar Ficha del Proyecto
-        if (proyecto.descripcion || proyecto.logros || proyecto.software_usado || proyecto.impacto) {
+        if (
+          proyecto.descripcion ||
+          proyecto.logros ||
+          proyecto.software_usado ||
+          proyecto.impacto
+        ) {
           document.getElementById("proyecto-ficha").style.display = "grid";
           document.getElementById("proyecto-descripcion-ficha").textContent =
             proyecto.descripcion || "No especificada";
-          
+
           const logrosLista = document.getElementById("proyecto-logros");
           logrosLista.innerHTML = "";
           if (proyecto.logros && Array.isArray(proyecto.logros)) {
-            proyecto.logros.forEach(logro => {
+            proyecto.logros.forEach((logro) => {
               const li = document.createElement("li");
               li.textContent = logro;
               logrosLista.appendChild(li);
             });
-          } else if (typeof proyecto.logros === 'string') {
+          } else if (typeof proyecto.logros === "string") {
             const li = document.createElement("li");
             li.textContent = proyecto.logros;
             logrosLista.appendChild(li);
