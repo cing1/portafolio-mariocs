@@ -184,9 +184,6 @@
         border-right: none;
     }
 
-    main {
-        margin-top: 60px;
-    }
 
     .container {
         padding: 2rem 1rem;
@@ -261,23 +258,6 @@
 
     .proyecto-img-wrapper {
         height: 150px;
-    }
-
-    .proyecto-footer {
-        flex-direction: column;
-        gap: 0.75rem;
-        justify-content: flex-start;
-    }
-
-    .fecha-publicacion {
-        font-size: 0.7rem;
-        width: 100%;
-    }
-
-    .btn-small {
-        width: 100%;
-        padding: 0.3rem 1rem !important;
-        font-size: 0.75rem !important;
     }
 
     .tag {
