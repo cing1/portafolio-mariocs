@@ -55,7 +55,7 @@ const proyectos = [
     descripcion:
       "Plataforma web para la visualización y descarga de libros, solucionarios y apuntes de libre acceso para estudiantes y profesionales de Ingeniería Civil. Funciona como una biblioteca digital centralizada que facilita el acceso rápido a material académico, con recursos alojados en Google Drive y cargados dinámicamente en la interfaz web.",
     imagen: "img/proyectos/0-programacion/biblioteca-ing-civil.jpg",
-    enlace: "https://github.com/cing1/biblioteca-ingenieria-civil",
+    enlace: "https://biblio-inge-civil-usfx.vercel.app/",
     etiquetas: [
       "Web",
       "HTML5",
@@ -82,7 +82,7 @@ const proyectos = [
     descripcion:
       "Desarrollo y gestión del sitio web oficial de la Sociedad Científica de Estudiantes de Ingeniería Civil (SCEIC-USFX), con información institucional, eventos, publicaciones y recursos para estudiantes. Proyecto open source disponible en GitHub.",
     imagen: "img/proyectos/0-programacion/pagina-sceic.jpg",
-    enlace: "https://github.com/cing1/Sociedad-Cient-fica-SCEIC-USFX",
+    enlace: "https://sceic-usfx.vercel.app/",
     etiquetas: [
       "Web",
       "Sociedad Científica",
